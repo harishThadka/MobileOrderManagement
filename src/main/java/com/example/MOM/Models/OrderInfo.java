@@ -9,7 +9,7 @@ public class OrderInfo {
 	@Id
 	private int orderId;
 	private String orderDate;
-	private String orderStaus;
+	private String orderStatus;
 	
 	@ManyToOne
 	private Customer customer;
@@ -51,19 +51,21 @@ public class OrderInfo {
 		this.orderDate = orderDate;
 	}
 
-	public String getOrderStaus() {
-		return orderStaus;
+	public String getOrderStatus() {
+		return orderStatus;
 	}
 
-	public void setOrderStaus(String orderStaus) {
-		this.orderStaus = orderStaus;
+	public void setOrderStatus(String orderStatus) {
+		this.orderStatus = orderStatus;
 	}
 
 	@Override
 	public String toString() {
-		return "OrderInfo [orderId=" + orderId + ", orderDate=" + orderDate + ", orderStaus=" + orderStaus
+		return "OrderInfo [orderId=" + orderId + ", orderDate=" + orderDate + ", orderStatus=" + orderStatus
 				+ ", customer=" + customer + ", mobile=" + mobile + "]";
 	}
+
+	
 
 		
 }

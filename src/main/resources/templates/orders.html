@@ -36,9 +36,10 @@
 
     <!-- White background css -->
     <link rel="stylesheet" type="text/css" href="../static/assets/css/white.css" th:href="@{/assets/css/white.css}">
-    
+
     <!-- White background responsive css -->
-    <link rel="stylesheet" type="text/css" href="../static/assets/css/whiteResponsive.css" th:href="@{/assets/css/whiteResponsive.css}">
+    <link rel="stylesheet" type="text/css" href="../static/assets/css/whiteResponsive.css"
+        th:href="@{/assets/css/whiteResponsive.css}">
 
 </head>
 
@@ -71,7 +72,7 @@
                                 <li><a href="/searchOrder">Search Order</a></li>
                                 <li><a href="/buyMobile">Buy Mobile</a></li>
                                 <li><a href="/viewMobiles">View Mobiles</a></li>
-                                <li><a href="/orders">Orders</a></li>
+                                <li><a href="/orders" class="active">Orders</a></li>
                             </ul>
                         </div>
                     </div>
@@ -87,7 +88,7 @@
                                 <li><a href="/searchOrder">Search Order</a></li>
                                 <li><a href="/buyMobile">Buy Mobile</a></li>
                                 <li><a href="/viewMobiles">View Mobiles</a></li>
-                                <li><a href="/orders">Orders</a></li>
+                                <li><a href="/orders" class="active">Orders</a></li>
                             </ul>
                         </div>
 
@@ -98,94 +99,28 @@
         </nav>
     </header>
 
-    <div class="content-box-md order-box" >
+    <div class="content-box-md">
         <div class="container">
             <div class="row">
 
-                <div class="col-md-12 col-xs-12">
-
-                    <div class="order-details">
-
-        				<h3> Order Details</h3>
+                <div class="col-md-3 col-xs-12" th:each="mobile: ${mobiles}">
+                    <div class="mobile-item">
+                        <h3 th:text="'Id: '+${mobile.mobileId}" />
                         <hr>
-                        <div class="details">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-md-2 col-xs-12">
-                                        <p th:text="'Order Id: '+${orderInfo.orderId}"/>
-                                    </div>
-                                    <div class="col-md-2 col-xs-12">
-                                        <p th:text="'Order Date: '+${orderInfo.orderDate}"/>
-                                    </div>
-                                    <div class="col-md-2 col-xs-12">
-                                        <p th:text="'Order status: '+${orderInfo.orderStatus}"/>
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="mobile-details">
+
+                            <p th:text="'Brand:'+' '+${mobile.brand}" />
+
+                            <p th:text="'Model:'+' '+${mobile.model}" />
+
+                            <p th:text="'Operating System:'+' '+${mobile.operatingSystem}" />
+
+                            <p th:text="'Screen size: '+${mobile.screenSize}" />
+
+                            <p th:text="'Storage: '+${mobile.storage}" />
+
+                            <p th:text="'Price: '+${mobile.price}" />
                         </div>
-
-                        <hr>
-        				<h3> Mobile Details:</h3>
-                        <hr>
-                        <div class="details">
-                            <div class="container">
-                                 <div class="row">
-                                    <div class="col-md-2 col-xs-12">
-                                        <p th:text="'Mobile Id: '+${orderInfo.mobile.mobileId}"/>
-                                    </div>
-                                    <div class="col-md-2 col-xs-12">
-                                        <p th:text="'Brand: '+${orderInfo.mobile.brand}"/>
-                                    </div>
-                                    <div class="col-md-2 col-xs-12">
-                                        <p th:text="'Model: '+${orderInfo.mobile.model}"/>
-                                    </div>
-                                    <div class="col-md-2 col-xs-12">
-                                        <p th:text="'Operating System: '+${orderInfo.mobile.operatingSystem}"/>
-                                    </div>
-                                    <div class="col-md-2 col-xs-12">
-                                        <p th:text="'Screen Size: '+${orderInfo.mobile.screenSize}+' Inches'"/>
-                                    </div>
-                                    <div class="col-md-2 col-xs-12">
-                                        <p th:text="'Storage: '+${orderInfo.mobile.storage}+'GB'"/>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                 <div class="col-md-2 col-xs-12">
-                                        <p th:text="'Price: '+${orderInfo.mobile.price}"/>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <hr>
-        				<h3> Shipping Details:</h3>
-                        <hr>
-                        <div class="details">
-                                 <div class="row">
-                                    <div class="col-md-2 col-xs-12">
-                                        <p th:text="'Customer Id: '+${orderInfo.customer.customerId}"/>
-                                    </div>
-                                    <div class="col-md-2 col-xs-12">
-                                        <p th:text="'First Name: '+${orderInfo.customer.firstName}"/>
-                                    </div>
-                                    <div class="col-md-2 col-xs-12">
-										<p th:text="'Last Name: '+${orderInfo.customer.lastName}"/>
-                                    </div>
-                                    <div class="col-md-3 col-xs-12">
-                                        <p th:text="'Email: '+${orderInfo.customer.email}"/>
-                                    </div>
-                                    <div class="col-md-3 col-xs-12">
-                                        <p th:text="'Phone Number: '+${orderInfo.customer.phoneNumber}"/>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                   <div class="col-md-4 col-xs-12">
-                                        <p th:text="'Address: '+${orderInfo.customer.address}"/>
-                                    </div>
-                                </div>
-                        </div>
-                        
-
 
                     </div>
 

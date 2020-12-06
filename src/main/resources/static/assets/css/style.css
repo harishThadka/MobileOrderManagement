@@ -184,8 +184,14 @@ footer p span{
     margin-left: 5px;
 }
 
+
+/* *****************************
+|    |  Navigation bar  |
+*******************************/
+
 .navbar{
     padding: 15px 1px 1px 1px;
+    padding-top: 10px;
 }
 
 
@@ -304,6 +310,16 @@ form {
     position: relative;
 }
 
+.buy-heading{
+	    color:white;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+}
+
+.buy-select{
+	padding-left:20px;
+}
+
 #custom-row{
     margin: 5px;
     display: inline-block;
@@ -322,11 +338,11 @@ form {
 #custom-row input{
   font-family: 'Open Sans', sans-serif;
   font-size: 15px;
-  width: 65%;
+  width: 100%;
   border-radius: 10px;
-  height: 30px;
+  height: 35px;
   padding: 10px;
-  border: 1px solid white;
+  border: 1px solid #f4c613;
   margin: 2px;
 }
 

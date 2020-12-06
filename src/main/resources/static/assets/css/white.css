@@ -83,6 +83,47 @@ ul.navbar-nav > li > a.active{
     transition: all 400ms ease-in-out;
 }
 
+/* Order-details*/
+
+.order-details{
+    margin-bottom: 20px;
+    background-color: #fff;
+    padding: 5px 5px 5px 5px;
+    -webkit-box-shadow: 0 0 10px rgb(0, 0, 0,0.2);
+    box-shadow: 0 0 10px rgb(0, 0, 0,0.2);
+    border-radius: 10px;
+    padding:20px;
+    margin-bottom: 50px;
+
+}
+
+.order-details h3{
+    
+    font-family: 'Raleway', sans-serif;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.order-details hr{
+
+    width: 100%;
+    height: 1px;
+    background-color: #f4c613;
+    margin: 0 auto;
+    border:none;
+    margin-bottom: 10px;
+}
+
+.order-details p{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+
+
+
+
 /* Footer */
 
 footer{
