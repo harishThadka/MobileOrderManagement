@@ -1,0 +1,43 @@
+@CHARSET "ISO-8859-1";
+
+
+/* Extra small devices */
+
+@media (max-width:767px){
+
+    /* Home Section */
+
+    #mobile-nav-open-btn{
+
+        display: block;
+    }
+
+    .navbar-brand {
+        padding: 8px 20px;
+    }
+
+    #home-heading h1{
+        font-size: 25px;
+        margin-bottom: 12px;
+    }
+
+    .btn-general{
+        padding: 8px 25px 6px 25px;
+        font-size: 1opx;
+    }
+
+    .input-general{
+        width: 200px;
+        
+    }
+
+    #custom-row input{
+        width: 180px;
+        border-radius: 10px;
+    }
+
+    #buy-content{
+        padding: 0;
+    }
+
+}

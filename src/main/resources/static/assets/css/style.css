@@ -1,0 +1,349 @@
+@CHARSET "ISO-8859-1";
+
+
+
+html, body{
+    height: 100%;
+}
+
+body{
+    color: #212226;
+}
+
+
+h1{
+    font-family: 'Raleway', sans-serif;
+}
+
+p{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    /* line-height: 24px; */
+}
+
+section {
+    background: #fff;
+    overflow: hidden;
+}
+
+#home{
+    background: none;
+    height: 100%;
+}
+
+
+#preloader {
+    background-color:rgb(231, 225, 225);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
+
+#status {
+    background-image: url("../img/pacman.gif");
+    background-repeat: no-repeat;
+    width: 90px;
+    height: 90px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -45px;
+    margin-left: -45px;
+    border-style: hidden;
+}
+
+#loading {
+    position: relative;
+    top: 70px;
+    color: #290908;
+    font-family: 'Pirata One', cursive;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+#bg-video {
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    background: url("../video/bgvideo.jpg") no-repeat;
+    background-size: cover;
+}
+
+
+#home-overlay{
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+#home-content{
+    width: 100%;
+    height: 100%;
+    display: table;
+}
+
+#home-content-inner{
+    display: table-cell;
+    vertical-align: middle;
+}
+
+#home-heading h1{
+    color: white;
+    font-size: 60px;
+    font-weight: 300;
+    margin-bottom: 20px;
+    /* display: inline-block; */
+    /* color: #f4c613;
+    font-weight: 300; */
+}
+
+.btn-general {
+    font-family: 'Raleway', sans-serif;
+    border-radius: 28px;
+    font-size: 13px;
+    text-transform: uppercase;
+    margin: 0 6px;
+    padding: 12px  50px 12px 50px;
+    transition: all .7s;
+}
+
+.btn-home{
+    margin-top: 10px;
+    /* background: none;
+    border: 1px solid white; */
+    background-color: #f4c613;
+    border: 1px solid #f4c613;
+    color: white;
+    letter-spacing: 1px;
+}
+
+.btn-home:hover, .btn-home:focus{
+    color: white;
+    /* background-color: #f4c613;
+    border: 1px solid #f4c613; */
+    background: none;
+    border: 1px solid white;
+    letter-spacing: 1px;
+}
+
+.input-general{
+    
+    display: inline-block;
+    width: 400px;
+    border-radius: 30px;
+    background-color:#212226;
+    font-family: 'Raleway', sans-serif;
+    color: white;
+    border: 1px solid #f4c613;
+    font-weight: 500;
+    padding: 18px;
+}
+
+/* .input-general:hover{
+    border-color: #f4c613;
+    
+} */
+
+footer{
+    /* background-color: #212226; */
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    padding-top: 4px;
+}
+
+footer p span{
+    color:#f4c613;
+}
+
+#img-logo{
+    width: 35px;
+    
+}
+
+#text-logo{
+    color: #f4c613;
+    /* font-family: 'Raleway', sans-serif; */
+    font-family: 'Pirata One';
+    font-size: 13px;
+    letter-spacing: 1px;
+    margin-left: 5px;
+}
+
+.navbar{
+    padding: 15px 1px 15px 1px;
+}
+
+
+.navbar-brand{
+    padding: 8px 35px;
+}
+
+ul.navbar-nav > li > a{
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+ul.navbar-nav > li > a:hover,
+ul.navbar-nav > li > a:focus{
+    background: none;
+    color: #f4c613;
+}
+
+ul.navbar-nav > li > a.active{
+    color: #f4c613;
+    font-weight: 600;
+}
+
+
+/* *****************************
+|    |   Mobile Navigation bar  |
+*******************************/
+.site-nav-wrapper{
+    position: relative;
+}
+
+#mobile-nav-open-btn{
+    color: #f4c613;
+    font-size: 30px;
+    position: absolute;
+    right: 6px;
+    cursor: pointer;
+    z-index: 2;
+    display: none;
+}
+
+#mobile-nav{
+    /* By default mobile nav will be hidden with height */
+    height: 0%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    background-color: rgba(255, 255, 255, 0.9);
+    transition: all 300ms linear;
+    overflow-y: hidden;
+}
+
+#mobile-nav-close-btn{
+    font-family: "Raleway", sans-serif;
+    color: #212226;
+    font-size: 68px;
+    font-weight: 400;
+    position: absolute;
+    top: -17px;
+    right: 20px;
+    cursor: pointer;
+    transition: .3s;
+    /* display: none; */
+}
+
+#mobile-nav-content{
+    text-align: center;
+    width: 100%;
+    margin-top: 30px;
+    position: relative;
+    top: 8%;
+}
+
+#mobile-nav ul li{
+    margin-bottom: 20px;
+}
+
+#mobile-nav a{
+    font-family: "Raleway", sans-serif;
+    font-size: 18px;
+    color: #212226;
+    font-weight: 300;
+    display: inline;
+    -webkit-transition: .3s;
+    transition: .3s;
+}
+
+#mobile-nav a:hover,
+#mobile-nav a:focus{
+    color: #f4c613;
+    background: none;
+}
+
+#mobile-nav a.active{
+    color: #f4c613;
+    font-weight: 500;
+}
+
+
+/* *****************************
+|    |   Buy Mobile            |
+*******************************/
+
+#buy-content{
+    padding: 0;
+    padding-left: 50px;
+    width: 80%;
+}
+form {
+    margin-top: 100px;
+    position: relative;
+}
+
+#custom-row{
+    margin: 5px;
+    display: inline-block;
+
+}
+
+#custom-row label{
+    color:white;
+    font-family: 'Raleway', sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    letter-spacing: 1px; 
+    text-align: center;
+    padding-top: 7px; 
+}
+#custom-row input{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 15px;
+  width: 65%;
+  border-radius: 10px;
+  height: 30px;
+  padding: 10px;
+  border: 1px solid white;
+  margin: 2px;
+}
+
+#custom-row input:hover{
+    border:none
+  }
+
+.btn-buy{
+    position: absolute;
+    /* left: 20px;
+    top: 55%; */
+    margin: 15px;
+    width: 130px;
+    height: 40px;
+    padding: 5px;
+    text-align: center;
+    border: white;
+}
