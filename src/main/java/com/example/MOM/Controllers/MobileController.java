@@ -92,6 +92,18 @@ public class MobileController {
         mv.setViewName("orderDetails");
         return mv;
     }
+    
+
+    @RequestMapping("viewMobiles")
+    public ModelAndView viewMobiles() {
+        mv.setViewName("viewMobiles");
+        Iterable<Mobile> mobileList = mobileRepo.findAll();
+        System.out.println("********************************************");
+        System.out.println(mobileList);
+        System.out.println("********************************************");
+        mv.addObject("mobiles", mobileList);
+        return mv;
+    }
 	
 	
 

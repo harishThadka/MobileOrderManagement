@@ -1,0 +1,90 @@
+/* White Navigation bar */
+
+.white-nav-top{
+    background: #fff;
+    padding-top: 0;
+    box-shadow: 0 8px 6px -9px #999;
+    z-index:2;
+}
+
+.white-nav-top ul.navbar-nav > li > a{
+    color: #212226;
+}
+.white-nav-top ul.navbar-nav > li > a:hover{
+    color: #f4c613;
+}
+
+ul.navbar-nav > li > a.active{
+    color: #f4c613;
+    font-weight: 600;
+}
+
+/* Content box and items */
+.content-box-md{
+    background-color: #f4f4f4;
+    padding-top: 70px; 
+    height: 100%;
+
+}
+
+
+
+.mobile-item{
+    margin-bottom: 20px;
+    background-color: #fff;
+    padding: 5px 5px 5px 5px;
+    -webkit-box-shadow: 0 0 10px rgb(0, 0, 0,0.2);
+    box-shadow: 0 0 10px rgb(0, 0, 0,0.2);
+    border-radius: 25px
+
+}
+
+.mobile-item h3{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.mobile-item hr{
+    width: 100px;
+    height: 3px;
+    background-color: #f4c613;
+    margin: 0 auto;
+    border:none;
+}
+
+.mobile-details{
+    margin: 10px 20px;
+    margin-left:25px;
+}
+
+.mobile-details p{
+    font-family: 'Raleway', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.mobile-item:hover {
+    background-color: #f4c613;
+}
+
+.mobile-item:hover h3,
+ .mobile-item:hover p {
+    color: #fff;
+}
+
+.mobile-item:hover hr{
+    background-color: #fff;
+}
+
+.mobile-item {
+    -webkit-transition: all 400ms ease-in-out;
+    transition: all 400ms ease-in-out;
+}
+
+/* Footer */
+
+footer{
+    background-color: #212226;
+}

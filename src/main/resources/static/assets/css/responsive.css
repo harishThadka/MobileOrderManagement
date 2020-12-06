@@ -41,3 +41,15 @@
     }
 
 }
+
+/* Medium devices */
+@media (min-width:768px){
+
+    /* Navigation bar */
+
+    #mobile-nav-open-btn{
+
+        display: none;
+    }
+
+}
