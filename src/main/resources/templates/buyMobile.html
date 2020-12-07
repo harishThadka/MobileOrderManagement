@@ -1,49 +1,38 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"
-	xmlns:th="http://www.thymeleaf.org">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 
 <head>
 
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>MOM</title>
+	<title>Buy Mobile</title>
 
-<!-- Favicon -->
-<link rel="shortcut icon" href="..static/assets/img/favicon.ico"
-	th:href="@{/assets/img/favicon.ico}">
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="..static/assets/img/favicon.ico" th:href="@{/assets/img/favicon.ico}">
 
-<!-- Google Fonts -->
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link
-	href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Raleway:wght@100;200;300;400;500;600;700&display=swap"
-	rel="stylesheet">
-<link
-	href="https://fonts.googleapis.com/css2?family=Pirata+One&display=swap"
-	rel="stylesheet">
+	<!-- Google Fonts -->
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link
+		href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Raleway:wght@100;200;300;400;500;600;700&display=swap"
+		rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Pirata+One&display=swap" rel="stylesheet">
 
-<!-- Bootstrap css -->
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-	integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
-	crossorigin="anonymous">
+	<!-- Bootstrap css -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+		integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-<!-- Font awesome cdn -->
-<link rel="stylesheet"
-	href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-	integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
-	crossorigin="anonymous">
+	<!-- Font awesome cdn -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+		integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
-<!-- custom css -->
-<link rel="stylesheet" type="text/css"
-	href="../static/assets/css/style.css"
-	th:href="@{/assets/css/style.css}">
+	<!-- custom css -->
+	<link rel="stylesheet" type="text/css" href="../static/assets/css/style.css" th:href="@{/assets/css/style.css}">
 
-<!-- Responsive css -->
-<link rel="stylesheet" type="text/css"
-	href="../static/assets/css/responsive.css"
-	th:href="@{/assets/css/responsive.css}">
+	<!-- Responsive css -->
+	<link rel="stylesheet" type="text/css" href="../static/assets/css/responsive.css"
+		th:href="@{/assets/css/responsive.css}">
 
 </head>
 
@@ -61,9 +50,8 @@
 
 					<!-- Logo -->
 					<div class="navbar-header">
-						<a class="navbar-brand" href=""> <img alt="Logo not found"
-							id="img-logo" src="../static/assets/img/logo.png"
-							th:src="@{/assets/img/logo.png}">
+						<a class="navbar-brand" href=""> <img alt="Logo not found" id="img-logo"
+								src="../static/assets/img/logo.png" th:src="@{/assets/img/logo.png}">
 						</a>
 					</div>
 
@@ -73,6 +61,7 @@
 							<ul class="nav navbar-nav pull-right">
 								<li><a href="/">Home</a></li>
 								<li><a href="/searchOrder">Search Order</a></li>
+								<li><a href="/addMobile">Add mobile</a></li>
 								<li><a href="/buyMobile" class="active">Buy Mobile</a></li>
 								<li><a href="/viewMobiles">View Mobiles</a></li>
 								<li><a href="/orders">Orders</a></li>
@@ -89,6 +78,7 @@
 							<ul class="nav">
 								<li><a href="/">Home</a></li>
 								<li><a href="/searchOrder">Search Order</a></li>
+								<li><a href="/addMobile">Add mobile</a></li>
 								<li><a href="/buyMobile" class="active">Buy Mobile</a></li>
 								<li><a href="/viewMobiles">View Mobiles</a></li>
 								<li><a href="/orders">Orders</a></li>
@@ -121,12 +111,9 @@
 				<h4 class="buy-heading buy-select">Select Mobile: </h4>
 				<div class="form-row">
 					<div class="col-md-5 col-xs-12" id="custom-row">
-						<select
-							name="mobile" class="form-control" id="validationDefault07"
-							required>
+						<select name="mobile" class="form-control" id="validationDefault07" required>
 							<!-- <option value="0">Select Mobile</option> -->
-							<option th:each="mobile : ${mobiles}"
-								th:value="${mobile.mobileId}"
+							<option th:each="mobile : ${mobiles}" th:value="${mobile.mobileId}"
 								th:text="${mobile.brand}+' '+${mobile.model}">
 							</option>
 						</select>
@@ -139,19 +126,16 @@
 
 				<div class="form-row">
 					<div class="col-md-3 col-xs-12" id="custom-row">
-						<label for="validationDefault02">First Name: </label> <input
-							type="text" name="firstName" placeholder="Enter First Name "
-							class="form-control input-general" required>
+						<label for="validationDefault02">First Name: </label> <input type="text" name="firstName"
+							placeholder="Enter First Name " class="form-control input-general" required>
 					</div>
 					<div class="col-md-3 col-xs-12" id="custom-row">
-						<label for="validationDefault03">Last Name: </label> <input
-							type="text" name="lastName" class="form-control input-general"
-							placeholder="Enter Last Name" required>
+						<label for="validationDefault03">Last Name: </label> <input type="text" name="lastName"
+							class="form-control input-general" placeholder="Enter Last Name" required>
 					</div>
 					<div class="col-md-4 col-xs-12" id="custom-row">
-						<label for="validationDefault05">Phone Number: </label> <input
-							type="text" name="phoneNumber" class="form-control input-general"
-							placeholder="Enter Phone Number" required>
+						<label for="validationDefault05">Phone Number: </label> <input type="text" name="phoneNumber"
+							class="form-control input-general" placeholder="Enter Phone Number" required>
 					</div>
 
 
@@ -159,22 +143,20 @@
 				<div class="form-row">
 
 					<div class="col-md-4 col-xs-12" id="custom-row">
-						<label for="validationDefault04">Email: </label> <input
-							name="email" type="text" class="form-control input-general"
-							placeholder="Enter Email" required>
+						<label for="validationDefault04">Email: </label> <input name="email" type="text"
+							class="form-control input-general" placeholder="Enter Email" required>
 					</div>
 					<div class="col-md-5 col-xs-12" id="custom-row">
-						<label for="validationDefault06">Address: </label> <input
-							name="address" type="text" class="form-control input-general"
-							placeholder="Enter address" required>
+						<label for="validationDefault06">Address: </label> <input name="address" type="text"
+							class="form-control input-general" placeholder="Enter address" required>
 					</div>
 				</div>
 
 				<div class="form-row text-center">
 					<div class="col-md-12 xs-12" id="custom-row">
 						<div id="home-btn">
-							<button class="btn btn-general btn-home" type="submit">Buy
-								Mobile</button>
+							<button class="btn btn-general btn-home" type="submit">
+								Place Order</button>
 						</div>
 					</div>
 				</div>
@@ -207,18 +189,15 @@
 
 
 	<!-- jQuery CDN link-->
-	<script
-		src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 	<!-- Bootstrap JS -->
-	<script
-		src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
 		integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
 		crossorigin="anonymous"></script>
 
 	<!-- custom JS -->
-	<script type="text/javascript" src="../static/assets/js/script.js"
-		th:src="@{/assets/js/script.js}"></script>
+	<script type="text/javascript" src="../static/assets/js/script.js" th:src="@{/assets/js/script.js}"></script>
 </body>
 
 </html>

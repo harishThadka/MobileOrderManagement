@@ -64,7 +64,7 @@
 						<a class="navbar-brand" href=""> <img alt="Logo not found"
 							id="img-logo" src="../static/assets/img/logo.png"
 							th:src="@{/assets/img/logo.png}">
-							
+
 						</a>
 					</div>
 
@@ -74,6 +74,7 @@
 							<ul class="nav navbar-nav pull-right">
 								<li><a href="/">Home</a></li>
 								<li><a href="/searchOrder" class="active">Search Order</a></li>
+								<li><a href="/addMobile">Add mobile</a></li>
 								<li><a href="/buyMobile">Buy Mobile</a></li>
 								<li><a href="/viewMobiles">View Mobiles</a></li>
 								<li><a href="/orders">Orders</a></li>
@@ -90,6 +91,7 @@
 							<ul class="nav">
 								<li><a href="/">Home</a></li>
 								<li><a href="/searchOrder" class="active">Search Order</a></li>
+								<li><a href="/addMobile">Add mobile</a></li>
 								<li><a href="/buyMobile">Buy Mobile</a></li>
 								<li><a href="/viewMobiles">View Mobiles</a></li>
 								<li><a href="/orders">Orders</a></li>
@@ -117,15 +119,18 @@
 
 			<div id="home-content-inner" class="text-center">
 				<form action="/orderDetails">
-					<div id="home-heading">
-						<h1>Search Order</h1>
-					</div>
-					<div id="home-input" class="text-center">
-						<input type="number" class="form-control input-general"
-							placeholder="Enter order id"  name="orderId" required>
-					</div>
-					<div id="home-btn">
-						<button class="btn btn-general btn-home" type="submit">Search</button>
+					<div class="search-content">
+
+						<div id="home-heading">
+							<h1>Search Order</h1>
+						</div>
+						<div id="home-input" class="text-center">
+							<input type="number" class="form-control input-general search-input"
+								placeholder="Enter order id" name="orderId" required>
+						</div>
+						<div id="home-btn">
+							<button class="btn btn-general btn-home" type="submit">Search</button>
+						</div>
 					</div>
 				</form>
 

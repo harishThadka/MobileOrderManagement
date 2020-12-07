@@ -11,8 +11,8 @@
 
 
 $(window).on("load", function () {
-   $('#status').delay(200).fadeOut();
-   $('#preloader').delay(200).fadeOut('Slow');
+   $('#status').delay(400).fadeOut();
+   $('#preloader').delay(400).fadeOut('Slow');
 });
 
 $(function () {

@@ -1,6 +1,8 @@
 package com.example.MOM.Controllers;
 
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.Optional;
 import java.util.Random;
 
@@ -62,27 +64,41 @@ public class MobileController {
     	int randMobile = rand.nextInt(10000)+1;
     	mobile.setMobileId(randMobile);
         mobileRepo.save(mobile);
-        mv.setViewName("home");
-        return mv;
+
+        return viewMobiles();
     }
     
     @RequestMapping("addNewOrder")
     public ModelAndView addNewMobile(Mobile mobile, Customer customer, OrderInfo orderInfo) {
+    	
     	int randCustomer = rand.nextInt(10000)+10001;
     	customer.setCustomerId(randCustomer);
         customerRepo.save(customer); 
         int randOrder = rand.nextInt(20000)+10001;
+        
+
+        
+        String orderDate = "";
+        LocalDate date = LocalDate.now();
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM/dd/yyyy");
+        orderDate = date.format(formatter);
+        
+        String orderStatus = "Processing";
+        
         orderInfo.setOrderId(randOrder);
+        orderInfo.setOrderDate(orderDate);
+        orderInfo.setOrderStatus(orderStatus);
         orderInfo.setCustomer(customer);
         orderInfo.setMobile(mobile);
         orderInfoRepo.save(orderInfo);
-        mv.setViewName("searchOrder");
-        return mv;
+        
+        return orderDetails(randOrder);
+        
     }
     
     
     @RequestMapping("orderDetails")
-    public ModelAndView search(int orderId) {
+    public ModelAndView orderDetails(int orderId) {
         OrderInfo orderFound = orderInfoRepo.findById(orderId).orElse(new OrderInfo());
         
         System.out.println("********************************************");

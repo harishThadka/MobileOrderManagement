@@ -103,11 +103,32 @@ section {
 #home-heading h1{
     color: white;
     font-size: 60px;
-    font-weight: 300;
-    margin-bottom: 20px;
+    font-weight: 500;
+    /* margin-bottom: 20px; */
     /* display: inline-block; */
     /* color: #f4c613;
     font-weight: 300; */
+    margin-top: 0px;
+    padding-top: 15px;
+    margin-bottom: 0px;
+    
+}
+
+
+#home-slogan p{
+	
+    color: #fff;
+    font-size: 20px;
+    font-weight: 100;
+    margin: 0px 0px 10px 0px;
+    font-style: oblique;
+}
+
+.search-content {
+	margin-top:-80px;
+}
+.search-input{
+	margin: 18px 0px;
 }
 
 .btn-general {
@@ -129,6 +150,11 @@ section {
     border: 1px solid #f4c613;
     color: white;
     letter-spacing: 1px;
+}
+
+.btn-home2{
+    /* color: #f4c613; */
+    width:150px;
 }
 
 .btn-home:hover, .btn-home:focus{
@@ -165,6 +191,10 @@ footer{
     width: 100%;
     color: white;
     padding-top: 8px;
+}
+
+footer p{
+	font-size:14px;
 }
 
 footer p span{

@@ -18,7 +18,16 @@
 
     #home-heading h1{
         font-size: 25px;
-        margin-bottom: 12px;
+        margin-bottom: 10px;
+    }
+    
+    #home-slogan p{
+    font-size: 13px;
+	}
+
+    .btn-home2{
+        /* color: #f4c613; */
+        width:120px;
     }
 
     .btn-general{
@@ -35,10 +44,16 @@
         width: 180px;
         border-radius: 10px;
     }
+    
+    footer p {
+	font-size:12px;
+    }
 
     #buy-content{
         padding: 0;
     }
+    
+
 
 }
 
