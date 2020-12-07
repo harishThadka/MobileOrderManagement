@@ -127,6 +127,32 @@ public class MobileController {
         }
         return orders();
     }
+    
+    @RequestMapping("editMobile")
+    public ModelAndView editMobile(int mobileId) {
+    	
+        Mobile mobile = mobileRepo.findById(mobileId).orElse(new Mobile());
+        
+        System.out.println("********************************************");
+        System.out.println(mobile);
+        System.out.println("********************************************");
+        
+        mv.addObject(mobile);
+        mv.setViewName("editMobile");
+        return mv;
+    }
+    
+    @RequestMapping("updateMobile")
+    public ModelAndView updateMobile(Mobile mobile) {
+
+    	System.out.println("********************************************");
+        System.out.println(mobile);
+        System.out.println("********************************************");
+        
+        mobileRepo.save(mobile);
+        return viewMobiles();
+    }
  
+
 	
 }

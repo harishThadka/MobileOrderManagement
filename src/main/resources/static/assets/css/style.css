@@ -112,6 +112,7 @@ section {
 
 .btn-general {
     font-family: 'Raleway', sans-serif;
+    font-weight: 500;
     border-radius: 28px;
     font-size: 13px;
     text-transform: uppercase;
@@ -350,6 +351,15 @@ form {
     border:none
   }
 
+#custom-row select{
+    color: black;
+    background-color: rgb(68, 65, 65);
+    background-color:#212226;
+    font-family: 'Raleway', sans-serif;
+    color: white;
+    font-weight: 500;
+}
+
 .btn-buy{
     position: absolute;
     /* left: 20px;
@@ -360,6 +370,14 @@ form {
     padding: 5px;
     text-align: center;
     border: white;
+}
+
+
+#custom-row #input-read{
+    background-color:rgb(24, 22, 22);
+    border: 1px solid black;
+    cursor: no-drop;
+    color: white;
 }
 
 

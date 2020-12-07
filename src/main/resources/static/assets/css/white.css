@@ -181,7 +181,12 @@ table tbody td{
     width: 100px;
     height: 26px;
     padding: 0px;
+    padding-top:2px;
     text-transform: none;
+    background-color: #EFEFEF;
+    color: black;
+    -webkit-transition: all 300ms ease-out;
+    transition: all 300ms ease-out;
 }
 
 .btn-cancel:hover,.btn-cancel:focus{

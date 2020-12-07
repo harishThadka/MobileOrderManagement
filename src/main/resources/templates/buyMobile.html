@@ -124,9 +124,11 @@
 						<select
 							name="mobile" class="form-control" id="validationDefault07"
 							required>
+							<!-- <option value="0">Select Mobile</option> -->
 							<option th:each="mobile : ${mobiles}"
 								th:value="${mobile.mobileId}"
-								th:text="${mobile.brand}+' '+${mobile.model}"></option>
+								th:text="${mobile.brand}+' '+${mobile.model}">
+							</option>
 						</select>
 					</div>
 				</div>

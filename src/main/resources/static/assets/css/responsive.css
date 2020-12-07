@@ -49,7 +49,7 @@
 
     #mobile-nav-open-btn{
 
-        display: none;
+        display: none !important;
     }
 
 }
