@@ -36,9 +36,10 @@
 
     <!-- White background css -->
     <link rel="stylesheet" type="text/css" href="../static/assets/css/white.css" th:href="@{/assets/css/white.css}">
-    
+
     <!-- White background responsive css -->
-    <link rel="stylesheet" type="text/css" href="../static/assets/css/whiteResponsive.css" th:href="@{/assets/css/whiteResponsive.css}">
+    <link rel="stylesheet" type="text/css" href="../static/assets/css/whiteResponsive.css"
+        th:href="@{/assets/css/whiteResponsive.css}">
 
 </head>
 
@@ -98,7 +99,7 @@
         </nav>
     </header>
 
-    <div class="content-box-md" >
+    <div class="content-box-md">
         <div class="container">
             <div class="row">
 
@@ -119,6 +120,11 @@
                             <p th:text="'Storage: '+${mobile.storage}" />
 
                             <p th:text="'Price: '+${mobile.price}" />
+
+                        </div>
+                        <div class="text-center">
+                            <a role="button" class="btn btn-general btn-edit"> Edit
+                            </a>
                         </div>
 
                     </div>

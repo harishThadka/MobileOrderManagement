@@ -1,6 +1,7 @@
 package com.example.MOM.Controllers;
 
 
+import java.util.Optional;
 import java.util.Random;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -105,7 +106,27 @@ public class MobileController {
         return mv;
     }
 	
+    
+    @RequestMapping("orders")
+    public ModelAndView orders() {
+        mv.setViewName("orders");
+        Iterable<OrderInfo> orderList = orderInfoRepo.findAll();
+        System.out.println("********************************************");
+        System.out.println(orderList);
+        System.out.println("********************************************");
+        mv.addObject("orders", orderList);
+        return mv;
+    }
 	
-
+    
+    @RequestMapping("cancelOrder")
+    public ModelAndView cancelOrder(int orderId) {
+        Optional<OrderInfo> orderFound = orderInfoRepo.findById(orderId);
+        if (orderFound.isPresent()) {
+            orderInfoRepo.deleteById(orderId);
+        }
+        return orders();
+    }
+ 
 	
 }

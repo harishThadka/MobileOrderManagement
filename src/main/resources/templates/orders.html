@@ -100,60 +100,70 @@
     </header>
 
     <div class="content-box-md">
+        <div class="container table-content">
+            <div class="table-responsive">
+                <table class="table table-sm">
+                    <thead>
+                        <tr>
+                            <!-- <th scope="col">#</th> -->
+                            <th scope="col">Order Id</th>
+                            <th scope="col">Order Date</th>
+                            <th scope="col">Order Status</th>
+                            <th scope="col">Mobile Details</th>
+                            <th scope="col">Shipping Details</th>
+                            <th scope="col">Cancel Order</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr th:each="order: ${orders}">
+                            <!-- <th scope="row"></th> -->
+                            <td th:text="${order.orderId}" />
+                            <td th:text="${order.orderDate}" />
+                            <td th:text="${order.orderStatus}" />
+                            <td th:text="${order.mobile.brand}+' '+${order.mobile.model}+ ', '+${order.mobile.price}" />
+                            <td
+                                th:text="${order.customer.FirstName}+' '+${order.customer.FirstName}+ ', '+${order.customer.address}" />
+                            <td><a role="button" class="btn btn-general btn-cancel"
+                                    th:href="@{/cancelOrder?orderId={orderId}(orderId=${order.orderId})}">Cancel
+                                </a>
+
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+
+    </div>
+    </div>
+
+    <footer class="text-center">
         <div class="container">
-            <div class="row">
-
-                <div class="col-md-3 col-xs-12" th:each="mobile: ${mobiles}">
-                    <div class="mobile-item">
-                        <h3 th:text="'Id: '+${mobile.mobileId}" />
-                        <hr>
-                        <div class="mobile-details">
-
-                            <p th:text="'Brand:'+' '+${mobile.brand}" />
-
-                            <p th:text="'Model:'+' '+${mobile.model}" />
-
-                            <p th:text="'Operating System:'+' '+${mobile.operatingSystem}" />
-
-                            <p th:text="'Screen size: '+${mobile.screenSize}" />
-
-                            <p th:text="'Storage: '+${mobile.storage}" />
-
-                            <p th:text="'Price: '+${mobile.price}" />
-                        </div>
-
-                    </div>
-
-                </div>
-
+            <div class="col-md-12">
+                <p>
+                    Copyright &copy; 2020 Developed by <span>Harish Thadka</span>
+                </p>
             </div>
         </div>
+    </footer>
 
-        <footer class="text-center">
-            <div class="container">
-                <div class="col-md-12">
-                    <p>
-                        Copyright &copy; 2020 Developed by <span>Harish Thadka</span>
-                    </p>
-                </div>
-            </div>
-        </footer>
+    <!-- Page Script -->
+    <script>
 
-        <!-- Page Script -->
-        <script>
+    </script>
 
-        </script>
+    <!-- jQuery CDN link -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-        <!-- jQuery CDN link -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
 
-        <!-- Bootstrap JS -->
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-            crossorigin="anonymous"></script>
-
-        <!-- custom JS -->
-        <script type="text/javascript" src="../static/assets/js/script.js" th:src="@{/assets/js/script.js}"></script>
+    <!-- custom JS -->
+    <script type="text/javascript" src="../static/assets/js/script.js" th:src="@{/assets/js/script.js}"></script>
 </body>
 
 </html>

@@ -1,3 +1,8 @@
+html, body{
+    background-color: #f4f4f4;
+}
+
+
 /* White Navigation bar */
 
 .white-nav-top{
@@ -21,9 +26,8 @@ ul.navbar-nav > li > a.active{
 
 /* Content box and items */
 .content-box-md{
-    background-color: #f4f4f4;
     padding-top: 70px; 
-    height: 100%;
+    margin-bottom:30px;
 
 }
 
@@ -35,7 +39,8 @@ ul.navbar-nav > li > a.active{
     padding: 5px 5px 5px 5px;
     -webkit-box-shadow: 0 0 10px rgb(0, 0, 0,0.2);
     box-shadow: 0 0 10px rgb(0, 0, 0,0.2);
-    border-radius: 25px
+    border-radius: 25px;
+    padding-bottom:10px;
 
 }
 
@@ -44,6 +49,8 @@ ul.navbar-nav > li > a.active{
     font-size: 30px;
     font-weight: 700;
     text-align: center;
+    margin-top:13px;
+    
 }
 
 .mobile-item hr{
@@ -54,16 +61,11 @@ ul.navbar-nav > li > a.active{
     border:none;
 }
 
-.mobile-details{
-    margin: 10px 20px;
-    margin-left:25px;
+.mobile-item {
+    -webkit-transition: all 400ms ease-in-out;
+    transition: all 400ms ease-in-out;
 }
 
-.mobile-details p{
-    font-family: 'Raleway', sans-serif;
-    font-size: 12px;
-    font-weight: 600;
-}
 
 .mobile-item:hover {
     background-color: #f4c613;
@@ -78,11 +80,33 @@ ul.navbar-nav > li > a.active{
     background-color: #fff;
 }
 
-.mobile-item {
-    -webkit-transition: all 400ms ease-in-out;
-    transition: all 400ms ease-in-out;
+.mobile-item:hover .btn-edit{
+	background-color: #fff;
+	color: #f4c613;
 }
 
+.mobile-details{
+    margin: 10px 20px;
+    margin-left:25px;
+}
+
+.mobile-details p{
+    font-family: 'Raleway', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.btn-edit{
+	background-color: #f4c613;
+	color:white;
+	width:50%;
+	height:30px;
+	padding:0px;
+	padding-top:4px;
+	font-size: 15px;
+	font-weight: 500;
+	text-transform:none;
+}
 /* Order-details*/
 
 .order-details{
@@ -121,7 +145,50 @@ ul.navbar-nav > li > a.active{
 }
 
 
+/* **************
+Orders
+************* */
 
+
+.table-content{
+    background-color: white;
+    border-radius: 10px;
+    -webkit-box-shadow: 0 0 10px rgb(0, 0, 0,0.2);
+    box-shadow: 0 0 10px rgb(0, 0, 0,0.2);
+}
+
+table thead tr{
+    color: #f4c613;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+table tbody tr th{
+    color: #f4c613;
+    font-family: 'Raleway', sans-serif;
+    font-size: 15px;
+}
+
+table tbody td{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    height: 26px;
+}
+
+.btn-cancel{
+    width: 100px;
+    height: 26px;
+    padding: 0px;
+    text-transform: none;
+}
+
+.btn-cancel:hover,.btn-cancel:focus{
+    border: none;
+    background-color: #f4c613;
+    color: white;
+}
 
 
 /* Footer */
