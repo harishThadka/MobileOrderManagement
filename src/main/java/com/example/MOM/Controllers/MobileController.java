@@ -110,7 +110,7 @@ public class MobileController {
         if(orderFound.getOrderId() == 0 && orderFound.getOrderDate()==null) {
     		String alert = "yes";
     		mv.addObject("alert", alert);
-    		System.out.println(alert);
+    		System.out.println("alert in orderDetails"+alert);
         	mv.setViewName("SearchOrder"); 
         }
         else {

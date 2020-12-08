@@ -111,7 +111,7 @@
 
 			<div id="home-content-inner" class="text-center">
 
-				<form name="formName" id="formId" action="/orderDetails	">
+				<form name="formName" id="formId" action="/orderDetails">
 					<div class="search-content">
 
 						<div id="home-heading">
@@ -153,9 +153,10 @@
 
 			var alertInfo = document.getElementById('alert-style').innerHTML;
 			console.log(alertInfo, "-----alertInfo");
-
-			alert('Order Not found, Enter Correct OrderId');
-
+			
+			if(alertInfo=='yes'){
+				alert('Order not found, Enter correct orderId');			
+			}		
 
 		}
 
