@@ -13,7 +13,6 @@
 $(window).on("load", function () {
    $('#status').delay(400).fadeOut();
    $('#preloader').delay(400).fadeOut('Slow');
-	alertFunc();
 });
 
 $(function () {
@@ -41,5 +40,16 @@ $(function () {
          "display": "block"
       });
    });
+
+});
+
+
+$(window).on('load', function () {
+
+   $('#home-heading').addClass("animate__animated animate__fadeInDown animate__delay-1s animate__slow");
+
+   $('#home-slogan').addClass("animate__animated animate__fadeInLeft animate__delay-1s animate__slow");
+
+   $('#home-btn').addClass("animate__animated animate__zoomIn animate__delay-2s animate__slow");
 
 });
