@@ -13,7 +13,7 @@
 $(window).on("load", function () {
    $('#status').delay(400).fadeOut();
    $('#preloader').delay(400).fadeOut('Slow');
-   alertFunc();
+
 });
 
 $(function () {

@@ -122,6 +122,7 @@
 								placeholder="Enter order id" name="orderId" required>
 						</div>
 						<p th:if="${alert == 'yes'}" id="alert-style" style="display:none;">yes</p>
+						<p th:unless="${alert == 'yes'}" id="alert-style" style="display:none;">no</p>
 						<div id="home-btn">
 							<button class="btn btn-general btn-home" type="submit">Search</button>
 						</div>
@@ -146,7 +147,12 @@
 	</footer>
 
 
-	<script type="text/javascript">
+
+	<!-- jQuery CDN link-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	
+	
+		<script type="text/javascript">
 
 
 		function alertFunc() {
@@ -159,12 +165,12 @@
 			}		
 
 		}
+		
+		$(window).on('load',function (){
+			alertFunc();
+		});
 
 	</script>
-
-
-	<!-- jQuery CDN link-->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 	<!-- Bootstrap JS -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"

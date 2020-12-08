@@ -42,7 +42,7 @@ public class MobileController {
 	public ModelAndView searchOrder() {
 		String alert = "no";
 		mv.addObject("alert", alert);
-		System.out.println(alert);
+		System.out.println("alert in search"+alert);
 		mv.setViewName("searchOrder");
 		return mv;
 	}
