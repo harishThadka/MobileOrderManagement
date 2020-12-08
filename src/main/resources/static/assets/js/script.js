@@ -46,10 +46,16 @@ $(function () {
 
 $(window).on('load', function () {
 
-   $('#home-heading').addClass("animate__animated animate__fadeInDown animate__delay-1s animate__slow");
+   $('#home-heading').addClass("animate__animated animate__fadeInDown animate__delay-500ms animate__slow");
 
-   $('#home-slogan').addClass("animate__animated animate__fadeInLeft animate__delay-1s animate__slow");
+   $('#home-slogan').addClass("animate__animated animate__fadeInLeft animate__delay-600ms animate__slow");
 
-   $('#home-btn').addClass("animate__animated animate__zoomIn animate__delay-2s animate__slow");
+   $('#home-input').addClass("animate__animated animate__zoomIn animate__delay-900ms animate__slow");
+
+   $('#home-btn').addClass("animate__animated animate__zoomIn animate__delay-900ms animate__slow");
+
+   $('.cards').addClass("animate__animated animate__fadeInLeft animate__delay-500ms animate__slow");
+
+   $('#content-box').addClass("animate__animated animate__zoomIn animate__delay-500ms animate__slow");
 
 });

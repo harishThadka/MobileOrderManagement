@@ -27,6 +27,9 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
         integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
+    <!-- Animate css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
     <!-- custom css -->
     <link rel="stylesheet" type="text/css" href="../static/assets/css/style.css" th:href="@{/assets/css/style.css}">
 
@@ -48,7 +51,7 @@
     <!-- Navigation bar -->
 
     <header>
-        <nav class="navbar navbar-fixed-top white-nav-top">
+        <nav class="navbar navbar-fixed-top white-nav-top" id="nav-animate">
             <div class="container-fluid">
                 <div class="site-nav-wrapper">
 
@@ -105,7 +108,7 @@
         <div class="container">
             <div class="row">
 
-                <div class="col-md-3 col-xs-12" th:each="mobile: ${mobiles}">
+                <div class="col-md-3 col-xs-12 cards" th:each="mobile: ${mobiles}">
                     <div class="mobile-item">
                         <h3 th:text="'Id: '+${mobile.mobileId}" />
                         <hr>

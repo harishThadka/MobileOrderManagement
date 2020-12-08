@@ -1,249 +1,233 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"
-	xmlns:th="http://www.thymeleaf.org">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 
 <head>
 
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Order Details</title>
+    <title>Order Details</title>
 
-<!-- Favicon -->
-<link rel="shortcut icon" href="..static/assets/img/favicon.ico"
-	th:href="@{/assets/img/favicon.ico}">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="..static/assets/img/favicon.ico" th:href="@{/assets/img/favicon.ico}">
 
-<!-- Google Fonts -->
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link
-	href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Raleway:wght@100;200;300;400;500;600;700&display=swap"
-	rel="stylesheet">
-<link
-	href="https://fonts.googleapis.com/css2?family=Pirata+One&display=swap"
-	rel="stylesheet">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Raleway:wght@100;200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pirata+One&display=swap" rel="stylesheet">
 
-<!-- Bootstrap css -->
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-	integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
-	crossorigin="anonymous">
+    <!-- Bootstrap css -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-<!-- Font awesome cdn -->
-<link rel="stylesheet"
-	href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-	integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
-	crossorigin="anonymous">
+    <!-- Font awesome cdn -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
-<!-- custom css -->
-<link rel="stylesheet" type="text/css"
-	href="../static/assets/css/style.css"
-	th:href="@{/assets/css/style.css}">
+    <!-- Animate css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 
-<!-- Responsive css -->
-<link rel="stylesheet" type="text/css"
-	href="../static/assets/css/responsive.css"
-	th:href="@{/assets/css/responsive.css}">
+    <!-- custom css -->
+    <link rel="stylesheet" type="text/css" href="../static/assets/css/style.css" th:href="@{/assets/css/style.css}">
 
-<!-- White background css -->
-<link rel="stylesheet" type="text/css"
-	href="../static/assets/css/white.css"
-	th:href="@{/assets/css/white.css}">
+    <!-- Responsive css -->
+    <link rel="stylesheet" type="text/css" href="../static/assets/css/responsive.css"
+        th:href="@{/assets/css/responsive.css}">
 
-<!-- White background responsive css -->
-<link rel="stylesheet" type="text/css"
-	href="../static/assets/css/whiteResponsive.css"
-	th:href="@{/assets/css/whiteResponsive.css}">
+    <!-- White background css -->
+    <link rel="stylesheet" type="text/css" href="../static/assets/css/white.css" th:href="@{/assets/css/white.css}">
+
+    <!-- White background responsive css -->
+    <link rel="stylesheet" type="text/css" href="../static/assets/css/whiteResponsive.css"
+        th:href="@{/assets/css/whiteResponsive.css}">
 
 </head>
 
 <body>
 
-	<!-- Navigation bar -->
+    <!-- Navigation bar -->
 
-	<header>
-		<nav class="navbar navbar-fixed-top white-nav-top">
-			<div class="container-fluid">
-				<div class="site-nav-wrapper">
+    <header>
+        <nav class="navbar navbar-fixed-top white-nav-top" id="nav-animate">
+            <div class="container-fluid">
+                <div class="site-nav-wrapper">
 
-					<!-- Mobile Nav bar open btn -->
-					<span id="mobile-nav-open-btn">&#9776;</span>
+                    <!-- Mobile Nav bar open btn -->
+                    <span id="mobile-nav-open-btn">&#9776;</span>
 
-					<!-- Logo -->
-					<div class="navbar-header">
-						<a class="navbar-brand" href=""> <img alt="Logo not found"
-							id="img-logo" src="../static/assets/img/logo.png"
-							th:src="@{/assets/img/logo.png}">
+                    <!-- Logo -->
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href=""> <img alt="Logo not found" id="img-logo"
+                                src="../static/assets/img/logo.png" th:src="@{/assets/img/logo.png}">
 
-						</a>
-						<!-- <span id="text-logo">MOM</span> -->
-					</div>
+                        </a>
+                        <!-- <span id="text-logo">MOM</span> -->
+                    </div>
 
-					<!-- Main menu -->
-					<div class="container-fluid">
-						<div class="collapse navbar-collapse">
-							<ul class="nav navbar-nav pull-right">
-								<li><a href="/">Home</a></li>
-								<li><a href="/searchOrder">Search Order</a></li>
-								<li><a href="/addMobile">Add mobile</a></li>
-								<li><a href="/buyMobile">Buy Mobile</a></li>
-								<li><a href="/viewMobiles">View Mobiles</a></li>
-								<li><a href="/orders">Orders</a></li>
-							</ul>
-						</div>
-					</div>
+                    <!-- Main menu -->
+                    <div class="container-fluid">
+                        <div class="collapse navbar-collapse">
+                            <ul class="nav navbar-nav pull-right">
+                                <li><a href="/">Home</a></li>
+                                <li><a href="/searchOrder">Search Order</a></li>
+                                <li><a href="/addMobile">Add mobile</a></li>
+                                <li><a href="/buyMobile">Buy Mobile</a></li>
+                                <li><a href="/viewMobiles">View Mobiles</a></li>
+                                <li><a href="/orders">Orders</a></li>
+                            </ul>
+                        </div>
+                    </div>
 
-					<!-- Mobile Menu -->
-					<div id="mobile-nav">
-						<!-- Mobile navbar close button -->
-						<span id="mobile-nav-close-btn">&times;</span>
+                    <!-- Mobile Menu -->
+                    <div id="mobile-nav">
+                        <!-- Mobile navbar close button -->
+                        <span id="mobile-nav-close-btn">&times;</span>
 
-						<div id="mobile-nav-content">
-							<ul class="nav">
-								<li><a href="/">Home</a></li>
-								<li><a href="/searchOrder">Search Order</a></li>
-								<li><a href="/addMobile">Add mobile</a></li>
-								<li><a href="/buyMobile">Buy Mobile</a></li>
-								<li><a href="/viewMobiles">View Mobiles</a></li>
-								<li><a href="/orders">Orders</a></li>
-							</ul>
-						</div>
+                        <div id="mobile-nav-content">
+                            <ul class="nav">
+                                <li><a href="/">Home</a></li>
+                                <li><a href="/searchOrder">Search Order</a></li>
+                                <li><a href="/addMobile">Add mobile</a></li>
+                                <li><a href="/buyMobile">Buy Mobile</a></li>
+                                <li><a href="/viewMobiles">View Mobiles</a></li>
+                                <li><a href="/orders">Orders</a></li>
+                            </ul>
+                        </div>
 
-					</div>
+                    </div>
 
-				</div>
-			</div>
-		</nav>
-	</header>
+                </div>
+            </div>
+        </nav>
+    </header>
 
-	<div class="content-box-md order-box">
-		<div class="container">
-			<div class="row">
+    <div class="content-box-md order-box" id="content-box">
+        <div class="container">
+            <div class="row">
 
-				<div class="col-md-12 col-xs-12">
+                <div class="col-md-12 col-xs-12">
 
-					<div class="order-details">
+                    <div class="order-details">
 
-						<h3>Order Details</h3>
-						<hr>
-						<div class="details">
-							<div class="container">
-								<div class="row">
-									<div class="col-md-3 col-xs-12">
-										<p th:text="'Order Id: '+${orderInfo.orderId}" />
-									</div>
-									<div class="col-md-3 col-xs-12">
-										<p th:text="'Order Date: '+${orderInfo.orderDate}" />
-									</div>
-									<div class="col-md-3 col-xs-12">
-										<p th:text="'Order status: '+${orderInfo.orderStatus}" />
-									</div>
-								</div>
-							</div>
-						</div>
+                        <h3>Order Details</h3>
+                        <hr>
+                        <div class="details">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-3 col-xs-12">
+                                        <p th:text="'Order Id: '+${orderInfo.orderId}" />
+                                    </div>
+                                    <div class="col-md-3 col-xs-12">
+                                        <p th:text="'Order Date: '+${orderInfo.orderDate}" />
+                                    </div>
+                                    <div class="col-md-3 col-xs-12">
+                                        <p th:text="'Order status: '+${orderInfo.orderStatus}" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
-						<hr>
-						<h3>Mobile Details:</h3>
-						<hr>
-						<div class="details">
-							<div class="container">
-								<div class="row">
-									<div class="col-md-2 col-xs-12">
-										<p th:text="'Mobile Id: '+${orderInfo.mobile.mobileId}" />
-									</div>
-									<div class="col-md-2 col-xs-12">
-										<p th:text="'Brand: '+${orderInfo.mobile.brand}" />
-									</div>
-									<div class="col-md-2 col-xs-12">
-										<p th:text="'Model: '+${orderInfo.mobile.model}" />
-									</div>
-									<div class="col-md-3 col-xs-12">
-										<p
-											th:text="'Operating System: '+${orderInfo.mobile.operatingSystem}" />
-									</div>
-									<div class="col-md-2 col-xs-12">
-										<p
-											th:text="'Screen Size: '+${orderInfo.mobile.screenSize}+' Inches'" />
-									</div>
+                        <hr>
+                        <h3>Mobile Details:</h3>
+                        <hr>
+                        <div class="details">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-2 col-xs-12">
+                                        <p th:text="'Mobile Id: '+${orderInfo.mobile.mobileId}" />
+                                    </div>
+                                    <div class="col-md-2 col-xs-12">
+                                        <p th:text="'Brand: '+${orderInfo.mobile.brand}" />
+                                    </div>
+                                    <div class="col-md-2 col-xs-12">
+                                        <p th:text="'Model: '+${orderInfo.mobile.model}" />
+                                    </div>
+                                    <div class="col-md-3 col-xs-12">
+                                        <p th:text="'Operating System: '+${orderInfo.mobile.operatingSystem}" />
+                                    </div>
+                                    <div class="col-md-2 col-xs-12">
+                                        <p th:text="'Screen Size: '+${orderInfo.mobile.screenSize}+' Inches'" />
+                                    </div>
 
-								</div>
-								<div class="row">
-									<div class="col-md-2 col-xs-12">
-										<p th:text="'Storage: '+${orderInfo.mobile.storage}+'GB'" />
-									</div>
-									<div class="col-md-2 col-xs-12">
-										<p th:text="'Price: $'+${orderInfo.mobile.price}" />
-									</div>
-								</div>
-							</div>
-						</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-2 col-xs-12">
+                                        <p th:text="'Storage: '+${orderInfo.mobile.storage}+'GB'" />
+                                    </div>
+                                    <div class="col-md-2 col-xs-12">
+                                        <p th:text="'Price: $'+${orderInfo.mobile.price}" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
-						<hr>
-						<h3>Shipping Details:</h3>
-						<hr>
-						<div class="details">
-							<div class="row">
-								<div class="col-md-2 col-xs-12">
-									<p th:text="'Customer Id: '+${orderInfo.customer.customerId}" />
-								</div>
-								<div class="col-md-3 col-xs-12">
-									<p th:text="'First Name: '+${orderInfo.customer.firstName}" />
-								</div>
-								<div class="col-md-3 col-xs-12">
-									<p th:text="'Last Name: '+${orderInfo.customer.lastName}" />
-								</div>
-								<div class="col-md-3 col-xs-12">
-									<p th:text="'Email: '+${orderInfo.customer.email}" />
-								</div>
+                        <hr>
+                        <h3>Shipping Details:</h3>
+                        <hr>
+                        <div class="details">
+                            <div class="row">
+                                <div class="col-md-2 col-xs-12">
+                                    <p th:text="'Customer Id: '+${orderInfo.customer.customerId}" />
+                                </div>
+                                <div class="col-md-3 col-xs-12">
+                                    <p th:text="'First Name: '+${orderInfo.customer.firstName}" />
+                                </div>
+                                <div class="col-md-3 col-xs-12">
+                                    <p th:text="'Last Name: '+${orderInfo.customer.lastName}" />
+                                </div>
+                                <div class="col-md-3 col-xs-12">
+                                    <p th:text="'Email: '+${orderInfo.customer.email}" />
+                                </div>
 
-							</div>
-							<div class="row">
-								<div class="col-md-3 col-xs-12">
-									<p th:text="'Phone Number: '+${orderInfo.customer.phoneNumber}" />
-								</div>
-								<div class="col-md-4 col-xs-12">
-									<p th:text="'Address: '+${orderInfo.customer.address}" />
-								</div>
-							</div>
-						</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3 col-xs-12">
+                                    <p th:text="'Phone Number: '+${orderInfo.customer.phoneNumber}" />
+                                </div>
+                                <div class="col-md-4 col-xs-12">
+                                    <p th:text="'Address: '+${orderInfo.customer.address}" />
+                                </div>
+                            </div>
+                        </div>
 
 
 
-					</div>
+                    </div>
 
-				</div>
+                </div>
 
-			</div>
-		</div>
+            </div>
+        </div>
+    </div>
 
-		<footer class="text-center">
-			<div class="container">
-				<div class="col-md-12">
-					<p>
-						Copyright &copy; 2020 Developed by <span>Harish Thadka</span>
-					</p>
-				</div>
-			</div>
-		</footer>
+    <footer class="text-center">
+        <div class="container">
+            <div class="col-md-12">
+                <p>
+                    Copyright &copy; 2020 Developed by <span>Harish Thadka</span>
+                </p>
+            </div>
+        </div>
+    </footer>
 
-		<!-- Page Script -->
-		<script>
-			
-		</script>
+    <!-- Page Script -->
+    <script>
 
-		<!-- jQuery CDN link -->
-		<script
-			src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </script>
 
-		<!-- Bootstrap JS -->
-		<script
-			src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-			integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-			crossorigin="anonymous"></script>
+    <!-- jQuery CDN link -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-		<!-- custom JS -->
-		<script type="text/javascript" src="../static/assets/js/script.js"
-			th:src="@{/assets/js/script.js}"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+
+    <!-- custom JS -->
+    <script type="text/javascript" src="../static/assets/js/script.js" th:src="@{/assets/js/script.js}"></script>
 </body>
 
 </html>
