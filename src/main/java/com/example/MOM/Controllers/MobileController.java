@@ -40,6 +40,9 @@ public class MobileController {
 	
 	@RequestMapping("searchOrder")
 	public ModelAndView searchOrder() {
+		String alert = "no";
+		mv.addObject("alert", alert);
+		System.out.println(alert);
 		mv.setViewName("searchOrder");
 		return mv;
 	}
@@ -104,9 +107,17 @@ public class MobileController {
         System.out.println("********************************************");
         System.out.println(orderFound);
         System.out.println("********************************************");
-        
-        mv.addObject(orderFound);
-        mv.setViewName("orderDetails");
+        if(orderFound.getOrderId() == 0 && orderFound.getOrderDate()==null) {
+    		String alert = "yes";
+    		mv.addObject("alert", alert);
+    		System.out.println(alert);
+        	mv.setViewName("SearchOrder"); 
+        }
+        else {
+            mv.addObject(orderFound);
+            mv.setViewName("orderDetails");        	
+        }
+
         return mv;
     }
     

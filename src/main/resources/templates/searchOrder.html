@@ -118,19 +118,24 @@
 		<div id="home-content">
 
 			<div id="home-content-inner" class="text-center">
-				<form action="/orderDetails">
+			
+				<form name="formName" id="formId" action="/orderDetails	">
 					<div class="search-content">
 
 						<div id="home-heading">
 							<h1>Search Order</h1>
+							
+							
 						</div>
 						<div id="home-input" class="text-center">
 							<input type="number" class="form-control input-general search-input"
 								placeholder="Enter order id" name="orderId" required>
 						</div>
+						<p th:if="${alert == 'yes'}" id="alert-style" style="display:none;">yes</p>
 						<div id="home-btn">
 							<button class="btn btn-general btn-home" type="submit">Search</button>
 						</div>
+						
 					</div>
 				</form>
 
@@ -149,9 +154,22 @@
 			</div>
 		</div>
 	</footer>
+	
 
+	<script type="text/javascript">
+	
 
+		function alertFunc() {
 
+			var alertInfo = document.getElementById('alert-style').innerHTML;
+			console.log(alertInfo,"-----alertInfo");
+			
+			alert('Order Not found, Enter Correct OrderId');
+			
+			
+		}
+
+	</script>
 
 
 	<!-- jQuery CDN link-->
